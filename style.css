@@ -16,27 +16,9 @@ ul {
 li * {
     float: left;
 }
-li, h3 {
-    clear:both;
-    list-style:none;
-}
 input, button {
     outline: none;
 }
-button {
-    background: none;
-    border: 0px;
-    color: #888;
-    font-size: 15px;
-    width: 60px;
-    margin: 10px 0 0;
-    font-family: Lato, sans-serif;
-    cursor: pointer;
-}
-button:hover {
-    color: #333;
-}
-h3,
 label[for='new-task'] {
     color: #333;
     font-weight: 700;
@@ -66,14 +48,82 @@ label[for='new-task'] {
     display: block;
     margin: 0 0 20px;
 }
-input#new-task {
-    float: left;
-    width: 318px;
+#form-task{
+    width: 70%;
 }
-p > button:hover {
-    color: #0FC57C;
+#form-list{
+    width: 180%;
+    margin-left: 35%;
 }
-
+#new-task{
+    width: 350px;
+    height: 40px;
+}
+@media screen and (max-width:1024px){
+    #form-list{
+        width: 185%;
+        margin-left: 35%;
+    }
+}
+@media screen and (max-width:575px){
+    #form-list{
+        width: 75%;
+        margin-left: 13%;
+    }
+}
+@media screen and (max-width:766px) and (min-width:576px){
+    #form-list{
+        width: 195%;
+        margin-left: 35%;
+    }
+}
+@media screen and (max-width:768px){
+    #new-task{
+        width: 200px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:369px){
+    #new-task{
+        width: 150px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:298px){
+    #new-task{
+        width: 120px;
+        height: 40px;
+    }
+}
+@media screen and (max-width:426px){
+    .label1{
+    font-size: 18px;
+    line-height: 40px;
+    width: 300px;
+    padding: 0 0 0 11px;
+    }
+}
+.delete{
+    border: red;
+    border-radius: 10%;
+    width: 15%;
+    background-color: red;
+    color: white;
+    height: 35px;
+    float: right;
+}
+.edit{
+    border: #FFC107;
+    border-radius: 10%;
+    width: 15%;
+    background-color:#FFC107;
+    color: white;
+    height: 35px;
+    
+}
+.label{
+    width: 30%;
+}
 li {
     overflow: hidden;
     padding: 20px 0;
@@ -84,17 +134,14 @@ li > input[type="checkbox"] {
     position: relative;
     top: 15px;
 }
-li > label {
+.label1{
     font-size: 18px;
     line-height: 40px;
-    width: 237px;
+    width: 50%;
     padding: 0 0 0 11px;
 }
 li >  input[type="text"] {
     width: 226px;
-}
-li > .delete:hover {
-    color: #CF2323;
 }
 #completed-tasks label {
     text-decoration: line-through;
@@ -107,6 +154,7 @@ ul li input[type=text] {
   
 ul li.editMode input[type=text] {
     display:block;
+    width: 50%;
 }
   
 ul li.editMode label {

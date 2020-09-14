@@ -3,20 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">    
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" charset="utf-8">  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">  
+    <link rel="icon" href="logotodo.ico"/>
     <title>TODO-LIST</title>
 </head>
 <body>
 <div class="container">
-    <p><label for="new-task">AJOUTER-ITEM</label><input id="new-task" type="text"><button>Add</button></p>
-    <h3>LISTE</h3>
-    <ul id="incomplete-tasks">
+    <form action="">
+        <label for="new-task">AJOUTER-ITEM</label>
+        <div class="row justify-content-center">
+            <div class="input-group mb-3" id="form-task">
+                <input id="new-task" type="text" class="form-control" placeholder="Ajouter tache">
+                <div class="input-group-append">
+                    <button type="button" class="btn btn-success">Add</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    <label for="new-task">LISTE</label>
+    <div class="row justify-content-start">
+        <div class="col-sm-5">
+            <ul id="incomplete-tasks" class="list-group">
         
-    </ul>
-    <h3>TACHE-COMPLETER</h3>
-    <ul id="completed-tasks">
+            </ul>
+        </div>
+    </div>
+    <label for="new-task">TACHE-COMPLETER</label>
+    <div class="row justify-content-start">
+        <div class="col-sm-5">
+            <ul id="completed-tasks" class="list-group">
 
-    </ul>
+            </ul>
+        </div>
+    </div>
 </div>
 <script type="text/javascript" src="main.js"></script>
 </body>
